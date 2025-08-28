@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": false,
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2019",
+    "strict": true
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "strict": false,
+    "noImplicitAny": false
+  },
+  "include": ["**/*.spec.ts", "**/*.e2e-spec.ts"],
+  "files": ["jest-e2e.json"]
+}

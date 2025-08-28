@@ -1,0 +1,285 @@
+:root { 
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+    color: #222; 
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+body, html, #root { 
+    height: 100%; 
+    margin: 0; 
+    background: #f5f5f5;
+}
+
+.container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px; 
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.btn { 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    border: none; 
+    background: #007bff; 
+    color: white;
+    cursor: pointer; 
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn:hover { 
+    background: #0056b3; 
+    transform: translateY(-1px);
+}
+
+.btn:disabled { 
+    opacity: .6; 
+    cursor: default; 
+}
+
+.btn-danger { 
+    background: #dc3545; 
+}
+
+.btn-danger:hover { 
+    background: #c82333; 
+}
+
+.icon-btn { 
+    border: none; 
+    background: transparent; 
+    border-radius: 6px; 
+    padding: 8px; 
+    cursor: pointer; 
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover { 
+    background: #f8f9fa; 
+    transform: scale(1.1);
+}
+
+.filters { 
+    display: flex; 
+    gap: 12px; 
+    margin: 20px 0; 
+    align-items: center;
+}
+
+.filters input { 
+    padding: 10px 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+    min-width: 200px; 
+    font-size: 14px;
+}
+
+.filters button { 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    border: 1px solid #ddd; 
+    background: #f8f9fa; 
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filters button:hover { 
+    background: #e9ecef; 
+    border-color: #adb5bd;
+}
+
+/* ТАБЛИЦА - КРАСИВЫЕ СТИЛИ */
+.table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.table th,
+.table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.thead { 
+    background: #f8f9fa; 
+}
+
+.th { 
+    padding: 16px 12px; 
+    text-align: center !important; /* ПРИНУДИТЕЛЬНО! */
+    font-weight: 600; 
+    color: #495057; 
+    border-bottom: 2px solid #dee2e6;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.th:hover { 
+    background: #e9ecef; 
+}
+
+.tbody tr { 
+    border-bottom: 1px solid #f1f3f4; 
+    transition: background-color 0.2s;
+}
+
+.tbody tr:hover { 
+    background: #f8f9fa; 
+}
+
+.tbody td { 
+    padding: 16px 12px; 
+    color: #212529; 
+    font-size: 14px;
+    text-align: center !important; /* ПРИНУДИТЕЛЬНО! */
+}
+
+.tbody tr:nth-child(even) { 
+    background: #fafbfc; 
+}
+
+.tbody tr:nth-child(even):hover { 
+    background: #f1f3f4; 
+}
+
+/* ШКАЛА ЗАГРУЗКИ */
+.load-level-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    justify-content: center; /* ПО ЦЕНТРУ! */
+}
+
+.load-level-bar {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.load-level-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.load-level-fill.low {
+    background: #28a745; /* ЗЕЛЕНЫЙ - хорошо */
+}
+
+.load-level-fill.medium {
+    background: #ffc107; /* ЖЕЛТЫЙ - средне */
+}
+
+.load-level-fill.high {
+    background: #dc3545; /* КРАСНЫЙ - плохо */
+}
+
+.load-level-text {
+    min-width: 50px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.muted { 
+    color: #6c757d; 
+    padding: 40px 16px; 
+    text-align: center; 
+    font-size: 16px;
+}
+
+.error { 
+    color: #dc3545; 
+    padding: 16px; 
+    background: #f8d7da;
+    border-radius: 6px;
+    border: 1px solid #f5c6cb;
+}
+
+/* ПАГИНАЦИЯ */
+.pager { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 16px; 
+    margin: 24px 0;
+    padding: 20px;
+}
+
+.pager button { 
+    padding: 10px 16px; 
+    border: 1px solid #dee2e6; 
+    background: white; 
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.pager button:hover { 
+    background: #f8f9fa; 
+    border-color: #adb5bd; 
+}
+
+.pager button:disabled { 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+
+.modal-backdrop { 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0,0,0,.4); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.modal { 
+    width: 900px; 
+    max-width: 96vw; 
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,.2); 
+    overflow: hidden; 
+}
+
+.modal-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 16px 20px; 
+    border-bottom: 1px solid #eee; 
+    font-weight: 600; 
+    background: #f8f9fa;
+}
